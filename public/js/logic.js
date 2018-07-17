@@ -12,3 +12,7 @@ function fetch(url, cb) {
     xhr.open("GET", url, true);
     xhr.send();
   }
+
+  if (typeof module !== 'undefined') {
+    module.exports = fetch;
+    }

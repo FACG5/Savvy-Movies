@@ -19,16 +19,7 @@ body{
     resize: vertical;
 }
 
-.search-query2{
-    width: 5%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
+
 .search-btn{
     background-color: #4CAF50;
     color: white;
@@ -52,18 +43,16 @@ body{
 #input{
 
 }
-img{
+.img_movie{
   
     height: 300px;
     width: 300px;
     border: 4px solid #fff;
-    margin: 10px;
+   
         /* display: grid;
         grid-template-columns: 100px 100px 100px;
         grid-gap: 10px;
      
-        color: #444; */
-
-      
+        color: #444; */  
 }
 
