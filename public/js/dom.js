@@ -22,7 +22,6 @@ addListener("#search", "click", function(event) {
 
   if (select("#input").value.trim() == "") {
     alert("Please Enter a Movie");
-    // select("#input").value="";
     return;
   }
 
@@ -46,59 +45,7 @@ addListener("#search", "click", function(event) {
       var movYear = response.data.movies[i].year;
       var image = createlement("img");
       image.setAttribute("id_movie", response.data.movies[i].id);
-      image.addEventListener("click", function(e) {
-        url =
-          "https://yts.am/api/v2/movie_details.json?movie_id=" +
-          this.getAttribute("id_movie");
-        fetchApi(url, function(obj) {
-          select("#main").innerHTML = "";
-          select(".movie_details").innerHTML = "";
-          var movie = obj.data.movie;
-
-          //mainDiv
-          var mainDiv = select(".movie_details");
-          //firstDiv
-          var imgDiv = createlement("div");
-          imgDiv.classList.add("img");
-          //seacandDiv
-          var infoDiv = createlement("div");
-          infoDiv.classList.add("information");
-          var img = createlement("img");
-          img.src = movie.medium_cover_image;
-          var form = createlement("form");
-
-          form.setAttribute("method", "get");
-          form.setAttribute("action", movie.torrents[0].url);
-
-          var btn = createlement("button");
-          btn.id = "btn-download";
-          btn.setAttribute("type", "submit");
-          btn.classList.add("search-btn");
-          btn.textContent = "Download";
-
-          form.appendChild(btn);
-
-          //adding elements to first Div;
-          imgDiv.appendChild(img);
-          imgDiv.appendChild(form);
-          mainDiv.appendChild(imgDiv);
-
-          var headingElement = createlement("h1");
-          headingElement.textContent = movie.title;
-
-          var dateElement = createlement("span");
-          dateElement.textContent = movie.year;
-
-          var pElement = createlement("p");
-          pElement.textContent = movie.description_intro;
-
-          //adding elements to secand Div;
-          infoDiv.appendChild(headingElement);
-          infoDiv.appendChild(dateElement);
-          infoDiv.appendChild(pElement);
-          mainDiv.appendChild(infoDiv);
-        });
-      });
+      image.addEventListener("click", viewMovie);
 
       var movName1 = createlement("h4");
       var movYear1 = createlement("span");
@@ -115,3 +62,58 @@ addListener("#search", "click", function(event) {
     }
   });
 });
+
+//view movie 
+function viewMovie(e) {
+  url =
+    "https://yts.am/api/v2/movie_details.json?movie_id=" +
+    this.getAttribute("id_movie");
+  fetchApi(url, function(obj) {
+    select("#main").innerHTML = "";
+    select(".movie_details").innerHTML = "";
+    var movie = obj.data.movie;
+
+    //mainDiv
+    var mainDiv = select(".movie_details");
+    //firstDiv
+    var imgDiv = createlement("div");
+    imgDiv.classList.add("img");
+    //seacandDiv
+    var infoDiv = createlement("div");
+    infoDiv.classList.add("information");
+    var img = createlement("img");
+    img.src = movie.medium_cover_image;
+    var form = createlement("form");
+
+    form.setAttribute("method", "get");
+    form.setAttribute("action", movie.torrents[0].url);
+
+    var btn = createlement("button");
+    btn.id = "btn-download";
+    btn.setAttribute("type", "submit");
+    btn.classList.add("search-btn");
+    btn.textContent = "Download";
+
+    form.appendChild(btn);
+
+    //adding elements to first Div;
+    imgDiv.appendChild(img);
+    imgDiv.appendChild(form);
+    mainDiv.appendChild(imgDiv);
+
+    var headingElement = createlement("h1");
+    headingElement.textContent = movie.title;
+
+    var dateElement = createlement("span");
+    dateElement.textContent = movie.year;
+
+    var pElement = createlement("p");
+    pElement.textContent = movie.description_intro;
+
+    //adding elements to secand Div;
+    infoDiv.appendChild(headingElement);
+    infoDiv.appendChild(dateElement);
+    infoDiv.appendChild(pElement);
+    mainDiv.appendChild(infoDiv);
+  });
+}
