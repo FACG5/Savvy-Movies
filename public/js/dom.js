@@ -28,22 +28,28 @@ addListener("#search", "click", function(event) {
           var movName = response.data.movies[i].title;
           var movYear = response.data.movies[i].year;
           var image = createlement("img");
-          var movName1 = createlement("h5");
+          var movName1 = createlement("h4");
           var movYear1 = createlement("span");
-          image.classList.add("img_movie");
+          var scop_movi = createlement("div");
+          image.classList.add("img_movi");
+          scop_movi.classList.add("scop_movi");
           image.src = gif;
           movName1.innerHTML = movName;
           movYear1.innerHTML = movYear;
-          select("#img").appendChild(image);
-          select("#img").appendChild(movName1);
-          select("#img").appendChild(movYear1);
+          scop_movi.appendChild(image);
+          scop_movi.appendChild(movName1);
+          scop_movi.appendChild(movYear1);
+          select("#img").appendChild(scop_movi);
         }
       } else {
-        var error = createlement("h4");
+       var error = createlement("h1");
+        error.classList.add("header");
         error.innerHTML = "Sorry Movie Not Found";
-        select("#img").appendChild(error);
+        select("#sec").appendChild(error);
       }
+
     });
+    // select("#input").value="";
   } else {
     alert("Please Enter a Movie");
   }
