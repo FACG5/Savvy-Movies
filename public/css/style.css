@@ -93,3 +93,34 @@ body {
     grid-gap: 10px;
   }
 }
+
+.movie_details {
+  max-width : 600px;
+  margin: auto;
+}
+.movie_details > .img {
+  float:left;
+  width : 220px;
+}
+.movie_details > .information {
+  padding-left: 40px;
+  overflow: hidden;
+  
+}
+#btn-download {
+  display: inline-block;
+  background-color: green;
+  border: 0;
+  padding: 10px;
+  border-radius:7px;
+  font-family: Monospaced;
+  width : 230px;
+}
+@media only screen and (max-width: 420px) {
+  .movie_details > .img {
+    float :none;
+    width :220px;
+    text-align :center;
+    margin:auto;
+  }
+}
