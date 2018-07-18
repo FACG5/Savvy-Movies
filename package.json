@@ -1,0 +1,29 @@
+{
+  "name": "savvydevs-movies-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/test.js |tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACG5/SavvyDevs-Movies-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACG5/SavvyDevs-Movies-API/issues"
+  },
+  "homepage": "https://github.com/FACG5/SavvyDevs-Movies-API#readme",
+  "dependencies": {
+    "tape": "^4.9.1"
+  },
+  "devDependencies": {
+    "tap-spec": "^5.0.0",
+    "test": "^0.6.0"
+  }
+}
