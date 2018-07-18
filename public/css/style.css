@@ -18,7 +18,7 @@ body {
 }
 
 .search-btn {
-  background-color: #4caf50;
+  background-color: #25802a;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -30,7 +30,7 @@ body {
   background-color: #45a049;
 }
 
-#img {
+#main {
   margin-left: 5%;
   margin-right: 5%;
   display: grid;
@@ -65,7 +65,7 @@ body {
   padding: 0;
 }
 @media screen and (max-width: 600px) {
-  #img {
+  #main {
     margin-left: 5%;
     margin-right: 5%;
     display: grid;
@@ -75,7 +75,7 @@ body {
   }
 }
 @media screen and (min-width: 601px) and (max-width: 800px) {
-  #img {
+  #main {
     margin-left: 5%;
     margin-right: 5%;
     display: grid;
@@ -85,7 +85,7 @@ body {
 }
 
 @media screen and (min-width: 801px) and (max-width: 1024px) {
-  #img {
+  #main {
     margin-left: 5%;
     margin-right: 5%;
     display: grid;

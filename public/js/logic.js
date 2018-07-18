@@ -1,4 +1,4 @@
-function fetch(url, cb) {
+function fetchApi(url, cb) {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
@@ -10,6 +10,22 @@ function fetch(url, cb) {
   xhr.send();
 }
 
+//select
+function select(id) {
+    return document.querySelector(id);
+  }
+  //addListener
+  function addListener(selector, eventName, callback) {
+    document.querySelector(selector).addEventListener(eventName, callback);
+  }
+  
+  //createlement
+  
+  function createlement(element) {
+    return document.createElement(element);
+  }
+
+
 if (typeof module !== "undefined") {
-  module.exports = fetch;
-}
+    module.exports = fetchApi;
+  }
