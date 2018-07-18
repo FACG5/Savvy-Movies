@@ -25,3 +25,12 @@ test("insure responseText retreve object  ",function(test){
     });
   
 });
+
+test("status_message  was successful ", function(test) {
+    const expected = "Query was successful";
+    logic(url, function(xhr) {
+      actual = xhr.status_message;
+      test.equal(actual, expected, " successful");
+      test.end();
+    });
+  });

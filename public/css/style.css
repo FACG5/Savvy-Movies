@@ -7,6 +7,7 @@ body {
 }
 
 .search-query {
+  outline: none;
   width: 30%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -49,11 +50,8 @@ body {
   border-radius: 8px;
   width: 210px;
 }
-.img_movi:hover{
-
-    opacity: 0.5;
-
-    
+.img_movi:hover {
+  opacity: 0.5;
 }
 .sear {
   margin-top: 2%;
@@ -95,32 +93,31 @@ body {
 }
 
 .movie_details {
-  max-width : 600px;
+  max-width: 600px;
   margin: auto;
 }
 .movie_details > .img {
-  float:left;
-  width : 220px;
+  float: left;
+  width: 220px;
 }
 .movie_details > .information {
   padding-left: 40px;
   overflow: hidden;
-  
 }
 #btn-download {
   display: inline-block;
   background-color: green;
   border: 0;
   padding: 10px;
-  border-radius:7px;
+  border-radius: 7px;
   font-family: Monospaced;
-  width : 230px;
+  width: 230px;
 }
 @media only screen and (max-width: 420px) {
   .movie_details > .img {
-    float :none;
-    width :220px;
-    text-align :center;
-    margin:auto;
+    float: none;
+    width: 220px;
+    text-align: center;
+    margin: auto;
   }
 }
