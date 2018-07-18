@@ -1,6 +1,6 @@
-#_**We are savvy**_
-##If you are bored and in need of a movie, we are the website for you!
-####**Through our website you can:**
+_**We are savvy**_
+If you are bored and in need of a movie, we are the website for you!
+**Through our website you can:**
 * Search for whatever movie you have in mind or simply leave a random keyword and browse
 what we have.
 * If you find a movie that you like, by clicking on the movie poster, you can access
@@ -16,7 +16,7 @@ with the the logic and DOM files.
 https://yts.am/api/v2/list_movies.json?
 https://yts.am/api/v2/movie_details.json?movie_id=10
 
-##**User stories:**
+**User stories:**
 * A visually impaired person:
 _"I would like to easily read and understand the text on your site
 so I can understand the information available"_
