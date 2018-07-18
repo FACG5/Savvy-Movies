@@ -1,20 +1,27 @@
-var test = require('tape');
-var logic = require('../public/js/logic.js');
-const url="https://yts.am/api/v2/list_movies.json?"
+var test = require("tape");
+var logic = require("../public/js/logic.js");
 
-// test('tape is working', function(t) {
-//     const actual = 1;
-//     const expected = 1;
-//     t.equals(actual, expected, 'one should equal one');
-//     t.end();
-//   })
+var url = "https://yts.am/api/v2/list_movies.json?";
 
-let actual = 0;
-test("insure Status is equal 200",function(t){
-    const expected = 200;
-    logic.fetchApi(url,function(xhr){
-        actual=xhr.status;
-        t.equal(actual,expected,"should State equal 200");
-        t.end();
+
+// test  State equal 200
+test("insure Status is equal 200", function(test) {
+  const expected = "ok";
+  logic(url, function(xhr) {
+    actual = xhr.status;
+    test.equal(actual, expected, "should State equal 200");
+    test.end();
+  });
+});
+
+
+// test function to check return responseText 
+test("insure responseText retreve object  ",function(test){
+    const expected = typeof({});
+    logic(url,function(xhr){
+        actual=typeof(xhr.responseText);
+        test.isNotEqual(actual,expected,'the responseText not  object');
+        test.end();
     });
+  
 });

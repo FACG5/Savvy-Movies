@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/FACG5/SavvyDevs-Movies-API#readme",
   "dependencies": {
-    "tape": "^4.9.1"
+    "tape": "^4.9.1",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "tap-spec": "^5.0.0",

@@ -1,3 +1,18 @@
+//select
+function select(id) {
+  return document.querySelector(id);
+}
+//addListener
+function addListener(selector, eventName, callback) {
+  document.querySelector(selector).addEventListener(eventName, callback);
+}
+
+//createlement
+
+function createlement(element) {
+  return document.createElement(element);
+}
+
 //search
 addListener("#search", "click", function(event) {
   event.preventDefault();
