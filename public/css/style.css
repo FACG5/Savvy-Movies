@@ -71,10 +71,10 @@ body {
     grid-gap: 10px;
     text-align: center;
   }
-
-  .search-query {
+    .search-query {
     outline: none;
-    width: 60%;
+    width: 68%;
+
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
